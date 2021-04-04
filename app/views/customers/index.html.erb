@@ -26,3 +26,32 @@
     <% end %>
   </tbody>
 </table>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#ID</th>
+      <th>First Name</th>
+      <th>Middle Name</th>
+      <th>Last Name</th>
+      <th>Mother Name</th>
+      <th>Gender</th>
+      <th>Addhar Number</th>
+      <th>Contact</th>
+      <th>Town</th>
+      <th>Is Handicap</th>
+      <th>Handicap Details</th>
+      <th>Archived</th>
+      <th>Created At</th>
+    </tr>
+    <tbody>
+      <%@students.each do |student|%>
+        <tr>
+          <%student.each do |key, value|%>
+            <td><%=value%></td>
+          <%end%>
+        <tr>
+      <%end%>
+    </tbody>
+  </thead>
+</table>
