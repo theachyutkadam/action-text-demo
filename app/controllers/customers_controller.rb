@@ -4,10 +4,7 @@ class CustomersController < ApplicationController
   # GET /customers or /customers.json
   def index
     @customers = Customer.all
-    # "http://192.168.31.168:3001/api/v1/students"
     url = "http://localhost:1025/api/v1/students"
-
-
     response = RestClient.get(url, headers={"X-AUTH-TOKEN" => 1})
     @students = JSON.parse(response)
   end
