@@ -10,42 +10,43 @@
       </ul>
     </div>
   <% end %>
+  <form>
+    <div class="row">
+      <div class="form-group col-sm-3">
+        <label for="exampleInputfirst_name">First Name</label>
+        <%= form.text_field :first_name, class: "form-control"%>
+      </div>
+      <div class="form-group col-sm-3">
+        <label for="exampleInputPassword1">Last Name</label>
+        <%= form.text_field :last_name, class: "form-control"%>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
-  </div>
+    <div class="row">
+      <div class="form-group col-sm-3">
+        <label for="exampleInputemail">Email</label>
+        <%= form.text_field :email, class: "form-control"%>
+      </div>
+      <div class="form-group col-sm-3">
+        <label for="exampleInputcontact">Contact</label>
+        <%= form.text_field :contact, class: "form-control"%>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
-  </div>
+    <div class="form-group col-sm-3">
+      <label for="exampleInputbirthdate">Birth Date</label>
+      <%= form.date_select :birthdate, min: Date.today - 25.year, max: Date.today, class: "form-control datepicker" %>
+    </div>
 
-  <div class="field">
-    <%= form.label :birthdate %>
-    <%= form.date_select :birthdate %>
-  </div>
+    <div class="form-group">
+      <label for="exampleInputdescription">Description</label>
+      <%= form.rich_text_area :description, class: "form-control"%>
+    </div>
 
-  <div class="field">
-    <%= form.label :contact %>
-    <%= form.text_field :contact %>
-  </div>
+    <div class="form-group col-3">
+      <%= form.submit class: "btn btn-primary" %>
+      <%= link_to 'Back', customers_path, class: "btn btn-info btn-sm text-white" %>
+    </div>
+  </form>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-
-  <div class="actions">
-    <%= link_to 'Back', customers_path, class: "btn btn-info btn-sm text-white" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.rich_text_area :description %>
-  </div>
 <% end %>
