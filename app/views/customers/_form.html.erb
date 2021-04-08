@@ -40,6 +40,10 @@
     <%= form.submit %>
   </div>
 
+  <div class="actions">
+    <%= link_to 'Back', customers_path, class: "btn btn-info btn-sm text-white" %>
+  </div>
+
   <div class="field">
     <%= form.label :description %>
     <%= form.rich_text_area :description %>
